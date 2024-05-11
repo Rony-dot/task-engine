@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { NavBar } from './components/Navbar';
+import "bootstrap/dist/css/bootstrap.css";
+// // Bootstrap CSS
+// import "bootstrap/dist/css/bootstrap.min.css";
+// // Bootstrap Bundle JS
+// import "bootstrap/dist/js/bootstrap.bundle.min";
+import { TaskList } from './components/TaskList';
+import { useEffect, useState } from 'react';
+import { getTasks } from './services/TaskController';
+import { Loader } from "./utils/Loader";
 
 function App() {
+  const [taskList, settaskList] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    setIsLoading(true)
+    getTasks()
+      .then((response) => {
+        settaskList(response.data);
+      }).finally(() => {
+        setIsLoading(false);
+      });
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      {isLoading && <Loader />}
+      {!isLoading && <TaskList tasks={taskList} />}
+    </>
   );
 }
 
