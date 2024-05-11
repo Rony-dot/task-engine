@@ -9,6 +9,7 @@ import { TaskList } from './components/TaskList';
 import { useEffect, useState } from 'react';
 import { getTasks } from './services/TaskController';
 import { Loader } from "./utils/Loader";
+import { AddTaskBtn } from './components/AddTaskBtn';
 
 function App() {
   const [taskList, settaskList] = useState([])
@@ -27,6 +28,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <AddTaskBtn />
       {isLoading && <Loader />}
       {!isLoading && <TaskList tasks={taskList} />}
     </>

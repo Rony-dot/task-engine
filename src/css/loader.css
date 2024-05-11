@@ -1,6 +1,6 @@
 /* HTML: <div class="loader"></div> */
 .loader {
-    width: 20px;
+    width: 520px;
     aspect-ratio: 1;
     border-radius: 50%;
     background: radial-gradient(at 30% 30%, #0000, #000a) red;
