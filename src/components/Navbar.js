@@ -4,19 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export const NavBar = () => {
   return (
-    <Navbar className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">
-          <img
-            alt=""
-            src="./logo.svg"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{' '}
-          Task Engine
-        </Navbar.Brand>
-      </Container>
-    </Navbar>
+    <nav class="navbar navbar-light bg-dark">
+      <a class="navbar-brand text-warning" href="#">
+        <img src="./logo.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+        Task Engine
+      </a>
+    </nav>
+
   );
 }
