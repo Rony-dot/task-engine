@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <AddTaskBtn />
+      <AddTaskBtn isLoading={isLoading} />
       {isLoading && <Loader />}
       {!isLoading && <TaskList tasks={taskList} />}
     </>
