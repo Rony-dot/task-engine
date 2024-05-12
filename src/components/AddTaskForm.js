@@ -9,14 +9,14 @@ export const AddTaskForm = ({ formdata, setformdata, onSubmit }) => {
         console.log("name: " + name + ", value: " + value);
         setformdata({
             ...formdata,
-            name: value
+            [name]: value // TODO; why using [] around the name, 
         });
     };
 
     return (
         <form onSubmit={onSubmit}>
             <Input label="Title" name="title" onChange={handleChange} value={formdata.title} placeholder="Title" />
-            <Input type="texarea" label="Description" name="desc" onChange={handleChange} value={formdata.desc} placeholder="Description" />
+            <Input label="Description" name="desc" onChange={handleChange} value={formdata.desc} placeholder="Description" />
             <Select
                 label="state"
                 name="states"

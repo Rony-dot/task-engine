@@ -9,7 +9,7 @@ export const AddTaskBtn = () => {
         id: 1,
         title: "Demo Title",
         desc: "Demo Description",
-        states: ["in_progress", "initiated"]
+        states: "in_progress"
     })
     const toggleModal = () => {
         setshowModal(!showModal)
@@ -22,14 +22,14 @@ export const AddTaskBtn = () => {
         <div className="container">
             <div className="row justify-content-md-center">
                 <div className="col-md-auto">
-                    <button className="btn" type=" button" data-toggle="modal" data-target="#exampleModalCenter" onClick={() => toggleModal()}>
+                    <button className="btn" type=" button" onClick={() => toggleModal()}>
                         <span className="material-icons md-48 orange600">
                             add_circle
                         </span>
                     </button>
                     {showModal && (
                         <AddTaskModal onClose={() => toggleModal()} >
-                            <AddTaskForm formdata={formdata} setformdata={setformdata} onSubmit={handleSubmit} ></AddTaskForm>
+                            <AddTaskForm formdata={formdata} setformdata={setformdata} onSubmit={handleSubmit} />
                         </AddTaskModal>
                     )}
                 </div>
