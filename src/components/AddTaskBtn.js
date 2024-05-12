@@ -14,6 +14,9 @@ export const AddTaskBtn = () => {
     const toggleModal = () => {
         setshowModal(!showModal)
     }
+    const handleSubmit = () => {
+
+    }
 
     return (
         <div className="container">
@@ -26,7 +29,7 @@ export const AddTaskBtn = () => {
                     </button>
                     {showModal && (
                         <AddTaskModal onClose={() => toggleModal()} >
-                            <AddTaskForm formdata={formdata}></AddTaskForm>
+                            <AddTaskForm formdata={formdata} setformdata={setformdata} onSubmit={handleSubmit} ></AddTaskForm>
                         </AddTaskModal>
                     )}
                 </div>
