@@ -1,0 +1,83 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  .container-custom {
+    position: relative;
+    color: white;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    /*Note, you can change the color to your choice depending on your 
+    image and what color blends with it*/
+}
+
+.container-custom::after {
+    content: "";
+    opacity: 0.8;
+    background: rgb(26, 31, 41) url("../img/bg.jpg") ;
+    background-blend-mode: luminosity;
+    /* also change the blend mode to what suits you, from darken, to other 
+    many options as you deem fit*/
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 500px;
+}
+
+  .myComponent-bg { 
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/bg.jpg"); 
+	  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	  height: 100%;
+	  filter: blur(8px); /* Adding blur background image */
+  }
+
+  
+  .bg-image {
+    /* The image used */
+    background-image: url("../img/bg.jpg");
+  
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Position text in the middle of the page/image */
+  .bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }

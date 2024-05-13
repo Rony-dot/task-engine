@@ -29,7 +29,9 @@ export const AddTaskForm = ({ formdata, setformdata, onSubmit }) => {
                     { label: "Initiated", value: "initiated" },
                 ]}
             />
-            <button type='submit' className='btn btn-primary'>Create</button>
+            <div class="d-grid gap-2 mt-2">
+                <button type='submit' className='btn btn-outline-success btn-sm mt-2'>Create</button>
+            </div>
         </form>
     )
 }

@@ -22,7 +22,7 @@ export const AddTaskBtn = () => {
         <div className="container">
             <div className="row justify-content-md-center">
                 <div className="col-md-auto">
-                    <button className="btn" type=" button" onClick={() => toggleModal()}>
+                    <button className="btn border border-3 border-info rounded-circle mt-3" type=" button" onClick={() => toggleModal()}>
                         <span className="material-icons md-48 orange600">
                             add_circle
                         </span>
