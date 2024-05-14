@@ -18,7 +18,7 @@ export const AddTaskForm = ({ formdata, setformdata, onSubmit }) => {
             <Input label="Title" name="title" onChange={handleChange} value={formdata.title} placeholder="Title" />
             <Input label="Description" name="desc" onChange={handleChange} value={formdata.desc} placeholder="Description" />
             <Select
-                label="state"
+                label="State"
                 name="states"
                 onChange={handleChange}
                 value={formdata.states}

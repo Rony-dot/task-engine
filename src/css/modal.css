@@ -28,12 +28,13 @@
   padding: 20px;
   border: 1px solid #888;
   width: 40%;
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
   
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #f50505;
   float: right;
   font-size: 28px;
   font-weight: bold;

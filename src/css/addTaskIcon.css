@@ -1,2 +1,5 @@
 .material-icons.md-48 { font-size: 70px; }
-.material-icons.orange600 { color: #18d1e2; }
+.material-icons.orange600 { 
+    color: #18d1e2; 
+    filter: drop-shadow(5px 5px 5px rgb(103, 90, 90));
+}
