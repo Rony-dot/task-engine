@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const TaskBadge = (config) => {
+export const TaskBadge = ({ state }) => {
     // const { color, state } = config;
     // const state = config.state;
     const colors = {
@@ -11,6 +11,6 @@ export const TaskBadge = (config) => {
 
     };
     return (
-        <span className={` bg-opacity-75 badge text-bg-${colors[config.state]} rounded-pill py-2 ms-1`}>{config.state}</span>
+        <span className={` bg-opacity-75 badge text-bg-${colors[state]} rounded-pill py-2 ms-1`}>{state}</span>
     )
 }

@@ -2,19 +2,31 @@ import React, { useState } from 'react'
 import "../css/addTaskIcon.css";
 import { AddTaskModal } from './AddTaskModal';
 import { AddTaskForm } from './AddTaskForm';
+import { addTask } from '../services/TaskController';
 
-export const AddTaskBtn = () => {
+export const AddTaskBtn = ({ handleAddTask }) => {
     const [showModal, setshowModal] = useState(false)
     const [formdata, setformdata] = useState({
         id: 1,
         title: "Demo Title",
         desc: "Demo Description",
-        states: "in_progress"
+        state: "in_progress"
     })
     const toggleModal = () => {
         setshowModal(!showModal)
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("adding data for: " + formdata.title);
+        handleAddTask(formdata);
+        toggleModal()
+        // addTask(formdata).then((data) => {
+        //     console.log("data is: ", data);
+        // }).catch((error) => {
+        //     console.log("error occurred: " + error);
+        // }).finally(() => {
+        //     console.log("nothing finally");
+        // })
 
     }
 

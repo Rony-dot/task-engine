@@ -19,9 +19,9 @@ export const AddTaskForm = ({ formdata, setformdata, onSubmit }) => {
             <Input label="Description" name="desc" onChange={handleChange} value={formdata.desc} placeholder="Description" />
             <Select
                 label="State"
-                name="states"
+                name="state"
                 onChange={handleChange}
-                value={formdata.states}
+                value={formdata.state}
                 options={[
                     { label: "In-Progress", value: "in_progress" },
                     { label: "Pending", value: "pending" },
@@ -29,7 +29,7 @@ export const AddTaskForm = ({ formdata, setformdata, onSubmit }) => {
                     { label: "Initiated", value: "initiated" },
                 ]}
             />
-            <div class="d-grid gap-2 mt-2">
+            <div className="d-grid gap-2 mt-2">
                 <button type='submit' className='btn btn-outline-success btn-sm mt-2'>Create</button>
             </div>
         </form>
