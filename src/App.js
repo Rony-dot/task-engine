@@ -1,7 +1,6 @@
 import './App.css';
 import { NavBar } from './components/Navbar';
 import "bootstrap/dist/css/bootstrap.css";
-import "./css/home.css";
 // // Bootstrap CSS
 // import "bootstrap/dist/css/bootstrap.min.css";
 // // Bootstrap Bundle JS
