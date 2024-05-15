@@ -6,6 +6,7 @@ import { TaskItem } from './TaskItem';
 import "../css/taskitems.css";
 
 export const TaskList = ({ tasks, handleDelete }) => {
+
     return (
         <div className='container'>
             <ol className="list-group list-group-numbered custom-list">
@@ -14,10 +15,10 @@ export const TaskList = ({ tasks, handleDelete }) => {
                         <li key={i} className="custom-list-item list-group-item d-flex justify-content-between align-items-start mt-4 bg-danger bg-opacity-10 border border-info rounded">
                             <TaskItem config={{ title: task.title, desc: task.desc }} />
                             <TaskBadge state={task.state} />
-                            <div className="btn btn-lg ms-3 px-0">
+                            <div className="btn btn-lg ms-3 px-0" >
                                 <i className="bi bi-pen"></i>
                             </div>
-                            <button type="button" className="btn btn-lg pe-0" onClick={() => handleDelete()} >
+                            <button onClick={() => handleDelete(task.id)} className="btn btn-lg">
                                 <i className="bi bi-trash"></i>
                             </button>
                         </li>

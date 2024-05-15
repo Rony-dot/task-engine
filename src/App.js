@@ -18,14 +18,13 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleAddTask = (data) => {
-    console.log("before handleAddTask: " + data.title);
+    data.id = taskList.length + 1
     settaskList([...taskList, { ...data }])
-    console.log("after handleAddTask: " + data.title);
   }
 
-  const handleDelete = () => {
+  const handleDelete = (id) => {
     console.log("excuting delete: ")
-    // settaskList(taskList.filter((task) => task.title != data.title))
+    settaskList(taskList.filter((task) => task.id !== id))
   }
 
   useEffect(() => {

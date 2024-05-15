@@ -53,7 +53,7 @@
 
   }
   
-  .custom-list-item::after {
+  /* .custom-list-item::after {
     content: '';
     position: absolute;
     top: 0;
@@ -62,7 +62,7 @@
     height: 100%;
     background-color: rgba(#000, 0);
     transition: .3s;
-  }
+  } */
   
   .custom-list-item img {
     display: block;
