@@ -22,3 +22,11 @@ export const addTask = (requestParams) => {
         params: requestParams
     });
 }
+
+export const deleteTask = (requestParams) => {
+    return callApiService({
+        method: "DELETE",
+        url: "/deleteTask",
+        params: requestParams
+    });
+}

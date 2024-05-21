@@ -30,7 +30,7 @@ export const AddTaskForm = ({ formdata, setformdata, onSubmit }) => {
                 ]}
             />
             <div className="d-grid gap-2 mt-2">
-                <button type='submit' className='btn btn-outline-success btn-sm mt-2'>Create</button>
+                <button type='submit' className='btn btn-outline-success btn-sm mt-2'>Submit</button>
             </div>
         </form>
     )

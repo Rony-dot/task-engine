@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import "../css/addTaskIcon.css";
 import { AddTaskModal } from './AddTaskModal';
 import { AddTaskForm } from './AddTaskForm';
-import { addTask } from '../services/TaskController';
 
 export const AddTaskBtn = ({ handleAddTask }) => {
     const [showModal, setshowModal] = useState(false)
