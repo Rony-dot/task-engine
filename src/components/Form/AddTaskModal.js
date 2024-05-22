@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/modal.css";
+import "../../css/modal.css";
 
 export const AddTaskModal = ({ onClose, children }) => {
     return (

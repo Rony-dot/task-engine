@@ -6,7 +6,7 @@ import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
 // import "bootstrap/dist/css/bootstrap.min.css";
 // // Bootstrap Bundle JS
 // import "bootstrap/dist/js/bootstrap.bundle.min";
-import { TaskList } from './components/TaskList';
+import { TaskList } from './components/Task/TaskList';
 import { useEffect, useState } from 'react';
 import { getTasks } from './services/TaskController';
 import { Loader } from "./utils/Loader";

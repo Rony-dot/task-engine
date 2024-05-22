@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "../css/addTaskIcon.css";
-import { AddTaskModal } from './AddTaskModal';
-import { AddTaskForm } from './AddTaskForm';
+import { AddTaskModal } from './Form/AddTaskModal';
+import { AddTaskForm } from './Form/AddTaskForm';
 
 export const AddTaskBtn = ({ handleAddTask }) => {
     const [showModal, setshowModal] = useState(false)

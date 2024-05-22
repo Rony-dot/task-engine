@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 // import ListGroup from 'react-bootstrap/ListGroup';
 import { TaskBadge } from './TaskBadge';
 import { TaskItem } from './TaskItem';
-import "../css/taskitems.css";
-import { AddTaskModal } from './AddTaskModal';
-import { AddTaskForm } from './AddTaskForm';
+import "../../css/taskitems.css";
+import { AddTaskModal } from '../Form/AddTaskModal';
+import { AddTaskForm } from '../Form/AddTaskForm';
 
 export const TaskList = ({ tasks, handleDelete, handleEdit }) => {
     const [showModal, setshowModal] = useState(false)
